@@ -38,7 +38,7 @@
                     <div class="form-group">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h1>E-Signature</h1>
+                                    <h2>E-Signature</h2>
                                 </div>
                             </div>
                             <div class="row">
