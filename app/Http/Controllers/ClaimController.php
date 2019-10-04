@@ -17,7 +17,9 @@ class ClaimController extends Controller
      */
     public function index()
     {
-        $claims = Claim::all();
+      //  $claims = Claim::all();
+        $claims = Claim::where('user_id',Auth::user()->id)->get();
+
         return view('claims.index', compact('claims'));
     }
 
