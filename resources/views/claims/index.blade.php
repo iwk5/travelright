@@ -107,7 +107,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Address</th>
                         <th scope="col">PNR</th>
-                 {{--       <th scope="col">Status</th>--}}
+                        <th scope="col">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -118,7 +118,7 @@
                                 <td data-label="Name">{{$claim->name}}</td>
                                 <td data-label="Address">{{$claim->address}}</td>
                                 <td data-label="PNR">{{$claim->pnr}}</td>
-                              {{--  <td data-label="Status">{{$claim->status}}</td>--}}
+                                <td data-label="Status">{{$claim->status}}</td>
                                 <td data-label="Actions">
                                     {{--<a href="{{route('claim-report', $claim->uuid)}}" style="color:#00cc6a"><i class="fa fa-star"></i></a>--}}
                                 <a target="_blank" href="{{route('generate-qrcode', $claim->uuid)}}" style="color:#3490dc">

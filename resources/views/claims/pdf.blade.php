@@ -11,17 +11,12 @@
         .tufan-sign img{
             width: 120px;
         }
+        .print {visibility:visible;}
         .signature-name{
             line-height: 0px;
         }
         .signature-img{
             max-width: 220px;
-        }
-        @page { size: auto;  margin: 0mm; }
-        @media print {
-            #printPageButton {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -31,7 +26,7 @@
         <div class="col-sm-10">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="text-right">{{ \Carbon\Carbon::parse($claim->created_at)->format('d-m-Y')}}</div>
+                    <div class="text-right">{{$claim->created_at}}</div>
                     <div>
                         <p>Dear/Sirs Madam, </br>
                             Address: {{$claim->address}} </br>
@@ -64,7 +59,7 @@
             </div>
             <div class="row justify-content-end">
                 <div class="col-2 text-right">
-                    <button id="printPageButton" class="btn btn-default mt-5 print pr-3 pl-3" onclick="window.print();return false;" >Print</button>
+                    <button class="btn btn-default mt-5 print pr-3 pl-3" onclick="window.print();return false;" >Print</button>
                 </div>
             </div>
         </div>

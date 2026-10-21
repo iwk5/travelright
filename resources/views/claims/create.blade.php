@@ -16,6 +16,7 @@
     }
 </style>
 @section('content')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6">
@@ -37,7 +38,7 @@
                     <div class="form-group">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h2>E-Signature</h2>
+                                    <h1>E-Signature</h1>
                                 </div>
                             </div>
                             <div class="row">
@@ -68,7 +69,8 @@
 @endsection
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script>
+
+    <script type="text/javascript">
         // signature code starts here
         window.onload = function() {
             window.requestAnimFrame = (function(callback) {
@@ -196,7 +198,7 @@
                 clearCanvas();
                 sigText.innerHTML = "";
                 $('.signature_saved').text("");
-                //  sigImage.setAttribute("src", "");
+              //  sigImage.setAttribute("src", "");
             }, false);
             submitBtn.addEventListener("click", function(e) {
                 const blank = isCanvasBlank(canvas);
@@ -211,7 +213,7 @@
                 }
 
 
-                //  sigImage.setAttribute("src", dataUrl);
+              //  sigImage.setAttribute("src", dataUrl);
             }, false);
             function isCanvasBlank(canvas) {
                 const context = canvas.getContext('2d');
@@ -257,7 +259,7 @@
                             title: 'Success ',
                             text: 'Claim Successful!'
                         }).then(function() {
-                            window.location.href = "{{url('claims')}}";
+                                window.location.href = "{{url('claims')}}";
                         });
                     },
                     error: function (reject) {
@@ -269,7 +271,7 @@
                         }
                     }
 
-                });
+            });
             });
             // base64 image into binary
             function base64ToBlob(base64, mime)

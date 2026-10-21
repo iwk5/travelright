@@ -17,9 +17,7 @@ class ClaimController extends Controller
      */
     public function index()
     {
-      //  $claims = Claim::all();
-        $claims = Claim::where('user_id',Auth::user()->id)->get();
-
+        $claims = Claim::all();
         return view('claims.index', compact('claims'));
     }
 
@@ -122,13 +120,13 @@ class ClaimController extends Controller
     {
         //
     }
-// pdf generator
+
     public function generatePdf($id)
     {
         $claim = Claim::where('uuid', $id)->first();
         return view('claims.pdf', compact('claim'));
     }
-// claim qrCode generator
+
     public function generateQrcode($id)
     {
         $claim = Claim::where('uuid', $id)->firstOrFail();
